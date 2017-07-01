@@ -51,4 +51,19 @@ def permut(array):
 
 #---------------------------------------------#
 
+# All combinations: M elements from LST
+
+def comb(m, lst):
+    if m == 0:
+        return [[]]
+    else:
+        return [[x] + suffix for i, x in enumerate(lst)
+                for suffix in comb(m - 1, lst[i + 1:])]
+
+       #  print(comb(3, [1,2,3,4]))
+
+#---------------------------------------------#
+
+
+            
 
