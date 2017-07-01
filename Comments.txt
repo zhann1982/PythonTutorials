@@ -1,1 +1,24 @@
+
 This is additional file for extra comments
+==============================================================================================================================================
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+          Here are main codes for GIT:
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+   git status   -> check if there are changes in current project
+
+   git pull   -> to load latest changes from github
+
+   git add fileName.extension    -> add editted file to the list of changes
+
+   or
+
+   git add -A     -> add all editted files to the list of changes
+
+   git commit -m "comment on changes"    ->  commit changes before sending, add comment (comments will help others to see what has changed)
+
+   git push    -> finally publish changes on Github
+
+----------------------------------------------------------------------------------------------------------------------------------------------

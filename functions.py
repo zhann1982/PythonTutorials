@@ -1,16 +1,16 @@
-# N! = 1*2*3*4*...*(N-2)*(N-1)*N
+#  N! = 1*2*3*4*...*(N-2)*(N-1)*N
 
 def factorial(n):
     if n==1:
         return 1
     return n*factorial(n-1)
  
-       # print(factorial(4))  -> 24
+       #  print(factorial(4))  -> 24
 
 #--------------------------------------------#
 
-# Check if N is divisible by M,
-# here N and M are natural numbers
+#  Check if N is divisible by M,
+#  here N and M are natural numbers
 
 def isDivisible(n,m):
     if (n/m)%1 == 0:
@@ -18,11 +18,11 @@ def isDivisible(n,m):
     else:
         return False
 
-       #print(isDivisible(9,3))  -> True
+       #  print(isDivisible(9,3))  -> True
 
 #--------------------------------------------#
 
-# Check if N is prime number
+#  Check if N is prime number
 
 def isPrime(n):
     for i in range(n//2):
@@ -32,9 +32,7 @@ def isPrime(n):
             return False
     return True
     
-    #print(isPrime((2**565) + 1))  ->  False
-
+       #  print(isPrime(21656616))
 #---------------------------------------------#
-
 
 
