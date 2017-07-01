@@ -36,13 +36,5 @@ def isPrime(n):
 
 #---------------------------------------------#
 
-def checkOverflow(n,func):
-    for i in range((2**n)+1):
-        try:
-            func(i)
-        except OverflowError:
-            return "Overflow at " + str(i)
-    return "No overflow"
 
-print(checkOverflow(600, isPrime))
 
