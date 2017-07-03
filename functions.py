@@ -71,16 +71,13 @@ def comb(m, lst):
 # Inpur is an array => [a0,a1,a2,a3,a4,...]
 
 def continuedFraction(arr0):
-    arr1 = arr0[1:]
-    def recurr(arr):
-        if len(arr)==1:
-            return arr[0]
-        return 1/(arr[0]+recurr(arr[1:]))
-    return recurr(arr1) + arr0[0]
+    if len(arr)==1:
+        return arr[0]
+    return arr[0] + 1/continuedFraction2(arr[1:])
 
-       #  print(recurr([1,1,1,1,1,1,1,1]))
+       #  print(recurr([3,7,15,1,292,1,1,1,2,1,3,1]))   ->  3.1415926535898153 = PI
     
-#---------------------------------------------------------------#
+#--------------------------------------------------------------------------------------#
 
 
             
