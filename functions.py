@@ -100,3 +100,12 @@ def generalCF(a,b):
       #   outputs  tanh(1)^(-1)
 #---------------------------------------------------------------------------------------#
 
+# interesting example of recursive function that returns multidimensional array
+
+def recX(n):
+    if n<=1:
+        return 1
+    x = [recX(n-1), 1]
+    return x
+
+      #   print(recX(5))    ->  [[[[1, 1], 1], 1], 1]
