@@ -66,9 +66,9 @@ def comb(m, lst):
 
 # Get the result of Continued Fraction of next form:
 #
-#  1 / ( a0 + 1 / (a1 + 1 / (a2 + 1 / ....
+#  a0 + 1 / (a1 + 1 / (a2 + 1 / ....
 #  
-# Inpur is an array => [a0,a1,a2,a3,a4,...]
+# Input is an array => [a0,a1,a2,a3,a4,...]
 
 def continuedFraction(arr0):
     if len(arr)==1:
@@ -79,6 +79,24 @@ def continuedFraction(arr0):
     
 #--------------------------------------------------------------------------------------#
 
+# Get the result of General Continued Fraction of next form:
+#
+#  a0 + b0/( a1 + b1/( a2 + b2 / (... 
+#
+# Inputs are two arrays:  [a0,a1,a2,...] , [b0,b1,b2,...]
 
-            
+def generalCF(a,b):
+    if (len(a)!=len(b)):
+        if (len(a)<len(b)):
+            b = b[:len(a)]
+        else:
+            a = a[:len(b)]
+    if len(a)==1:
+        return a[0]
+    else:
+        return a[0] + b[0]/generalCF(a[1:],b[1:])
+    
+      #   print(generalCF([1,3,5,7,9,11,13,15,17,19,21,23,25,27,29,31],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]))
+      #   outputs  tanh(1)^(-1)
+#---------------------------------------------------------------------------------------#
 
