@@ -7,7 +7,7 @@ def factorial(n):
  
        #  print(factorial(4))  -> 24
 
-#--------------------------------------------#
+#-----------------------------------------------------------------#
 
 #  Check if N is divisible by M,
 #  here N and M are natural numbers
@@ -20,7 +20,7 @@ def isDivisible(n,m):
 
        #  print(isDivisible(9,3))  -> True
 
-#--------------------------------------------#
+#-----------------------------------------------------------------#
 
 #  Check if N is prime number
 
@@ -33,7 +33,7 @@ def isPrime(n):
     return True
     
        #  print(isPrime(21656616))
-#---------------------------------------------#
+#----------------------------------------------------------------#
 
 # Permutation of elements of array or string
 
@@ -49,7 +49,7 @@ def permut(array):
 
        #  print(permut("abcd"))
 
-#---------------------------------------------#
+#---------------------------------------------------------------#
 
 # All combinations: M elements from LST
 
@@ -62,7 +62,22 @@ def comb(m, lst):
 
        #  print(comb(3, [1,2,3,4]))
 
-#---------------------------------------------#
+#---------------------------------------------------------------#
+
+# Get the result of Continued Fraction of next form:
+#
+#  1 / ( a0 + 1 / (a1 + 1 / (a2 + 1 / ....
+#  
+# Inpur is an array => [a0,a1,a2,a3,a4,...]
+
+def recurr(arr):
+    if len(arr)==1:
+        return arr[0]
+    return 1/(arr[0]+recurr(arr[1:]))
+
+       #  print(recurr([1,1,1,1,1,1,1,1]))
+    
+#---------------------------------------------------------------#
 
 
             
