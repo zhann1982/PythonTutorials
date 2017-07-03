@@ -109,3 +109,32 @@ def recX(n):
     return x
 
       #   print(recX(5))    ->  [[[[1, 1], 1], 1], 1]
+
+#---------------------------------------------------------------------------------------#
+
+# Tangent function based on General Continued Fraction
+# All such functions based on 'Euler's continued fraction formula'
+
+def tangent(x):
+    
+    x1 = -1*x*x
+    aa = [2 * i + 1 for i in range(20)]
+    bb = [x1 for i in range(20)]
+    bb[0] = x
+    
+    def rec(a,b):
+        if (len(a)!=len(b)):
+            if (len(a)<len(b)):
+                b = b[:len(a)]
+            else:
+                a = a[:len(b)]
+        if len(a)==1:
+            return a[0]
+        else:
+            return b[0]/(a[0] + rec(a[1:],b[1:]))
+
+    return rec(aa,bb)
+
+      #  print(tangent(3.1415926 / 4))  ->  0.99999
+    
+#---------------------------------------------------------------------------------------#
