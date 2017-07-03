@@ -70,10 +70,13 @@ def comb(m, lst):
 #  
 # Inpur is an array => [a0,a1,a2,a3,a4,...]
 
-def recurr(arr):
-    if len(arr)==1:
-        return arr[0]
-    return 1/(arr[0]+recurr(arr[1:]))
+def continuedFraction(arr0):
+    arr1 = arr0[1:]
+    def recurr(arr):
+        if len(arr)==1:
+            return arr[0]
+        return 1/(arr[0]+recurr(arr[1:]))
+    return recurr(arr1) + arr0[0]
 
        #  print(recurr([1,1,1,1,1,1,1,1]))
     
