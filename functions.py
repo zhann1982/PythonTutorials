@@ -135,6 +135,22 @@ def tangent(x):
 
     return rec(aa,bb)
 
-      #  print(tangent(3.1415926 / 4))  ->  0.99999
+      #   print(tangent(3.1415926 / 4))  ->  0.99999
     
 #---------------------------------------------------------------------------------------#
+
+# Interesting function that recursively finds sum of elements of array
+
+def sumArr(arr):
+    a, *b = arr
+    if len(b)==0:
+        return arr[0]
+    else:
+        b[0] = b[0] + a
+        return sumArr(b)
+    
+      #   print(sumArr([1,1,1,1,1,1]))
+        
+#---------------------------------------------------------------------------------------#
+
+
