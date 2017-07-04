@@ -1,7 +1,7 @@
 #  N! = 1*2*3*4*...*(N-2)*(N-1)*N
 
 def factorial(n):
-    if n==1:
+    if (n==1 or n==0):
         return 1
     return n*factorial(n-1)
  
