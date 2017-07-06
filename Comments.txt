@@ -7,6 +7,8 @@ This is additional file for extra comments
           Here are main codes for GIT:
 ----------------------------------------------------------------------------------------------------------------------------------------------
 
+   git clone {repository link from github.com}   -> creates a folder on your computer with a link to repository
+
    git status   -> check if there are changes in current project
 
    git pull   -> to load latest changes from github
